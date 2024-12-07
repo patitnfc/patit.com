@@ -66,6 +66,31 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slideshow-image {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .mission-section, .product1-section {
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            color: #E19033;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            text-align: justify;
+        }
         .contact-options {
             margin-top: 40px;
         }
@@ -81,40 +106,7 @@
             height: 50px;
             margin-bottom: 5px;
         }
-        .mission-section {
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            color: #E19033;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            text-align: center;
-        }
-      .product1-section {
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            color: #E19033;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            text-align: center;
-        }
-        .contact-us-button {
-            display: inline-block;
-            background-color: #fff;
-            border: 2px solid #E19033;
-            color: #E19033;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        .contact-us-button:hover {
-            background-color: #E19033;
+        .contact-options div {
             color: #fff;
         }
         footer {
@@ -131,9 +123,9 @@
                 <button>Our Products</button>
                 <div class="dropdown-content">
                     <a href="#product1">Customisable Smart NFC Cards</a>
-                    <a href="#product2">Personal Detail NFC Cards </a>
+                    <a href="#product2">Personal Detail NFC Cards</a>
                     <a href="#product3">Digital Business Cards</a>
-                    <a href="#product4">Keychain NFC Tags </a>
+                    <a href="#product4">Keychain NFC Tags</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -145,14 +137,19 @@
                 </div>
             </div>
         </div>
-      
-        <a href="#contact-options" class="contact-us-button">Contact Us</a>
-              <div id="#product1" class="product1-section">
+        
+        <div id="product1" class="product1-section">
             <h2>Customisable Smart NFC Cards</h2>
             <p>
                 Durable, customizable cards for sharing contact details, social profiles, and payment info with a tap.
             </p>
+            <div class="slideshow-container">
+                <img class="slideshow-image active" src="https://i.imgur.com/h8zEVK9.jpeg" alt="Customisable Smart NFC Card">
+                <img class="slideshow-image" src="https://i.imgur.com/FCCCIWf.png" alt="Another NFC Card">
+                <img class="slideshow-image" src="https://i.imgur.com/2EGh7Li.jpeg" alt="Additional Card Design">
+            </div>
         </div>
+
         <div id="mission" class="mission-section">
             <h2>Our Mission</h2>
             <p>
@@ -162,9 +159,7 @@
                 and technologically advanced products.
             </p>
         </div>
-        
-        <!-- Contact Us Button -->
-        
+
         <p id="contact-options" style="margin-top: 30px;">Select a contact option below:</p>
         <div class="contact-options">
             <a href="mailto:patit.nfc@gmail.com">
@@ -196,5 +191,17 @@
     <footer>
         <img src="https://i.imgur.com/RslNhMJ.png" alt="Footer Image" style="width: 150px; height: auto; border-radius: 10px;">
     </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow-image');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => showSlide(currentSlide + 1), 3000);
+    </script>
 </body>
 </html>
