@@ -1,0 +1,148 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E19033;
+        }
+        .container {
+            text-align: center;
+            padding: 0px;
+        }
+        .cover-slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+        }
+        .cover-slideshow-image {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .active-cover {
+            display: block;
+        }
+        .dropdown-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown button {
+            background-color: #fff;
+            border: 2px solid #E19033;
+            color: #E19033;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            min-width: 160px;
+        }
+        .dropdown-content a {
+            color: #E19033;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #E19033;
+            color: #fff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+      .contact-us-button {
+            display: inline-block;
+            background-color: #fff;
+            border: 2px solid #E19033;
+            color: #E19033;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .contact-us-button:hover {
+            background-color: #E19033;
+            color: #fff;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slideshow-image {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .mission-section, .product1-section , .product2-section,.product3-section,.product4-section,.product5-section,.product6-section,.product7-section,.vision-section, .motto-section{
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            color: #E19033;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            text-align: justify;
+        }
+      
+        .contact-options {
+            margin-top: 40px;
+        }
+        .contact-options a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+        }
+        .contact-options img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        .contact-options div {
+            color: #fff;
+        }
+      
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+      .product-name {
+        background-color: #fff; /* White background */
+        color: #E19033; /* Font color */
+        font-size: 27px; /* Increased font size */
+        border: none; /* Remove default border */
+        padding: 0px 5px; /* Add padding */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 5px; /* Rounded corners */
+        text-align:left ; /* Align text to the left */
+        display: inline-block; /* Maintain button structure */
+    }
+
+    .product-name:hover {
+        background-color: #E19033; /* Change background color on hover */
+        color: #fff; /* Change font color on hover */
+    }
+    </style>
