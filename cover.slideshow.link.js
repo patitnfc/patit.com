@@ -3,12 +3,13 @@
     let coverCurrentSlide = 0;
     const coverSlides = document.querySelectorAll('.cover-slideshow-image');
 
-    // Add a click event listener to the first cover slide
-    if (coverSlides.length > 0) {
-        coverSlides[0].addEventListener('click', () => {
-            toggleProductVisibility('.product1-section'); // Redirect to "product1"
+    // Add click event listeners for each cover slide
+    coverSlides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+            // Redirect to the respective product section
+            toggleProductVisibility(`.product${index + 1}-section`);
         });
-    }
+    });
 
     setInterval(() => {
         // Remove the active class from the current slide
@@ -91,3 +92,4 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
         toggleProductVisibility(targetId);
     });
 });
+
